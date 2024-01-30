@@ -1,0 +1,37 @@
+name: my-project
+version: "0.1.0"
+github: "username/my-project"
+license: MIT
+author: "Author name"
+maintainer: "example@example.com"
+synopsis: Short description of your project
+description: Longer description of your project
+category: Web
+
+dependencies:
+  - base >= 4.7 && < 5
+  - hspec
+
+library:
+  source-dirs: ./
+
+executables:
+  my-project-exe:
+    main: main.hs
+    source-dirs: ./
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+# Custom GHC options can be specified here.
+# ghc-options:
+#   - -Wall
+
+# Additional files needed by the build process can be listed here.
+# extra-source-files:
+#   - README.md
+#   - ChangeLog.md
+
+# Metadata used when publishing your package.
+# You can find more information about the fields under:
+# https://www.stackage.org/package/authors-guide

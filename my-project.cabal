@@ -1,0 +1,46 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           my-project
+version:        0.1.0
+synopsis:       Short description of your project
+description:    Longer description of your project
+category:       Web
+homepage:       https://github.com/username/my-project#readme
+bug-reports:    https://github.com/username/my-project/issues
+author:         Author name
+maintainer:     example@example.com
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/username/my-project
+
+library
+  exposed-modules:
+      Tests
+  other-modules:
+      Paths_my_project
+  hs-source-dirs:
+      ./
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
+
+executable my-project-exe
+  main-is: main.hs
+  other-modules:
+      Tests
+      Paths_my_project
+  hs-source-dirs:
+      ./
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
